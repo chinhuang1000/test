@@ -1,0 +1,8 @@
+prefix=/home/rachel/ws/devel
+
+Name: odom_gmapping
+Description: Description of odom_gmapping
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: nav_msgs roscpp rospy tf

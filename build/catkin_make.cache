@@ -1,0 +1,2 @@
+new_serial:odom_gmapping:openslam_gmapping:ros-keyboard:rplidar_ros:serial:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:test_topic
+-DCATKIN_DEVEL_PREFIX=/home/rachel/ws/devel -DCMAKE_INSTALL_PREFIX=/home/rachel/ws/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/rachel/ws/install
+
+Name: tircgo_uart
+Description: Description of tircgo_uart
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime geometry_msgs roscpp rospy std_msgs

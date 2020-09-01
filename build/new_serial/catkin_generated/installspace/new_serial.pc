@@ -1,0 +1,8 @@
+prefix=/home/rachel/ws/install
+
+Name: new_serial
+Description: Description of new_serial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
