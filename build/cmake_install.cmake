@@ -131,14 +131,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/rachel/ws/build/gtest/cmake_install.cmake")
-  include("/home/rachel/ws/build/openslam_gmapping/cmake_install.cmake")
   include("/home/rachel/ws/build/serial/cmake_install.cmake")
-  include("/home/rachel/ws/build/slam_gmapping/slam_gmapping/cmake_install.cmake")
   include("/home/rachel/ws/build/ros-keyboard/cmake_install.cmake")
   include("/home/rachel/ws/build/new_serial/cmake_install.cmake")
+  include("/home/rachel/ws/build/test_topic/cmake_install.cmake")
   include("/home/rachel/ws/build/rplidar_ros/cmake_install.cmake")
-  include("/home/rachel/ws/build/slam_gmapping/gmapping/cmake_install.cmake")
-  include("/home/rachel/ws/build/odom_gmapping/cmake_install.cmake")
 
 endif()
 

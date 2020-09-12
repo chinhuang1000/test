@@ -157,8 +157,9 @@ public:
 				v=0; w=5;
 				break;
   		}
-  		cmd_msg.data[0] = v;
-		cmd_msg.data[1] = w;
+
+		cmd_msg.data.push_back(v); //vx
+   		cmd_msg.data.push_back(w);
 		pub.publish(cmd_msg);
   		ROS_INFO("published and go: [v=%d, w=%d]", v, w);
 
