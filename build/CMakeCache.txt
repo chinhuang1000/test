@@ -418,7 +418,7 @@ keyboard_BINARY_DIR:STATIC=/home/rachel/ws/build/ros-keyboard
 keyboard_SOURCE_DIR:STATIC=/home/rachel/ws/src/ros-keyboard
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/melodic/lib/libtf2.so
 
 //Dependencies for the target
 log_LIB_DEPENDS:STATIC=general;sensor_range;general;sensor_odometry;general;sensor_base;
@@ -443,6 +443,12 @@ new_serial_SOURCE_DIR:STATIC=/home/rachel/ws/src/new_serial
 
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/melodic/share/nodelet/cmake
+
+//Value Computed by CMake
+odom_BINARY_DIR:STATIC=/home/rachel/ws/build/odom
+
+//Value Computed by CMake
+odom_SOURCE_DIR:STATIC=/home/rachel/ws/src/odom
 
 //Value Computed by CMake
 odom_gmapping_BINARY_DIR:STATIC=/home/rachel/ws/build/odom_gmapping
@@ -702,7 +708,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

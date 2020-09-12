@@ -80,16 +80,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -123,6 +113,16 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -196,21 +196,6 @@ serial_example: serial/CMakeFiles/serial_example.dir/rule
 serial_example/fast:
 	cd /home/rachel/ws/build && $(MAKE) -f serial/CMakeFiles/serial_example.dir/build.make serial/CMakeFiles/serial_example.dir/build
 .PHONY : serial_example/fast
-
-# Convenience name for target.
-serial/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/rachel/ws/build && $(MAKE) -f CMakeFiles/Makefile2 serial/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : serial/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: serial/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/rachel/ws/build && $(MAKE) -f serial/CMakeFiles/_catkin_empty_exported_target.dir/build.make serial/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
 
 examples/serial_example.o: examples/serial_example.cc.o
 
@@ -328,13 +313,12 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... serial"
 	@echo "... edit_cache"
+	@echo "... serial"
 	@echo "... install/local"
 	@echo "... serial_example"
 	@echo "... test"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... examples/serial_example.o"
 	@echo "... examples/serial_example.i"
